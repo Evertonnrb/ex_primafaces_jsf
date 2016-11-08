@@ -23,18 +23,16 @@
         <br></br><br></br><br></br><br></br>
         <h:form >
 
-<p:toolbar>
-                        <p:commandButton value="adicionar" action="#{carroBean.adicionar()}" update="@form"></p:commandButton>
-                    </p:toolbar>   
-            <p:fieldset legend="Objetos">
-                              
-                </p:toolbarGroup>
+            <p:toolbar>
 
+            </p:toolbar>   
+            <p:toolbarGroup >
+                <p:commandButton value="adicionar" action="#{carroBean.adicionar()}" update="@form"></p:commandButton>
+            </p:toolbarGroup>
+            <p:fieldset legend="Objetos">
                 <p:panelGrid columns="2">
-                    <p:toolbarGroup >
-                   
                     <h:outputLabel value="Modelo"></h:outputLabel>
-                    <p:inputText value="#{carroBean.carro.modelo}"></p:inputText>
+                    <p:inputText value="#{carroBean.carro.modelo}" update="@form"></p:inputText>
 
                     <h:outputLabel value="Fabricante "></h:outputLabel>
                     <p:inputText value="#{carroBean.carro.fabricante}"></p:inputText>
